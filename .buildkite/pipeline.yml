@@ -23,6 +23,14 @@ steps:
       message: '${BUILDKITE_MESSAGE}'
     async: true
 
+  - label: 'Trigger React-native pipeline'
+    trigger: 'at-bugsnag-expo'
+    build:
+      branch: '${BUILDKITE_BRANCH}'
+      commit: '${BUILDKITE_COMMIT}'
+      message: '${BUILDKITE_MESSAGE}'
+    async: true
+
   - label: 'Lint'
     plugins:
       docker-compose#v2.6.0:
