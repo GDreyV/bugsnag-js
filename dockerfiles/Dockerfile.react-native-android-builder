@@ -21,7 +21,7 @@ ENV GRADLE_OPTS="-Dorg.gradle.daemon=false"
 
 COPY test/react-native/features /app/features
 
-ARG REACT_VERSION
+ARG REACT_NATIVE_VERSION
 ENV REACT_NATIVE_FIXTURE=${REACT_NATIVE_VERSION}
 
 RUN echo ${REACT_NATIVE_VERSION}
