@@ -24,7 +24,7 @@ steps:
     async: true
 
   - label: 'Trigger React-native pipeline'
-    trigger: 'at-bugsnag-expo'
+    trigger: 'at-bugsnag-react-native'
     build:
       branch: '${BUILDKITE_BRANCH}'
       commit: '${BUILDKITE_COMMIT}'
