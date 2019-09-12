@@ -6,7 +6,6 @@ import {
   Button,
   StyleSheet
 } from 'react-native';
-import console = require('console');
 
 export default class App extends Component {
   constructor(props) {
