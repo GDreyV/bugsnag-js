@@ -6,6 +6,7 @@ import {
   Button,
   StyleSheet
 } from 'react-native';
+import console = require('console');
 
 export default class App extends Component {
   constructor(props) {
@@ -33,7 +34,8 @@ export default class App extends Component {
   }
 
   startScenario = () => {
-    fetch('http://localhost:9339', {
+    console.log("StartScenario")
+    fetch('http://bs-local.com:9339', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -46,7 +48,8 @@ export default class App extends Component {
   }
 
   startBugsnag = () => {
-    fetch('http://localhost:9339', {
+    console.log("StartScenario")
+    fetch('http://bs-local.com:9339', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
