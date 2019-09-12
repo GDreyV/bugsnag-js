@@ -3,4 +3,6 @@ cp -r test/react-native/features/fixtures/app test/react-native/features/fixture
 cd test/react-native/features/fixtures/$REACT_NATIVE_VERSION
 source build.sh
 
-cp output/output.ipa ../../../../../build/$REACT_NATIVE_VERSION.ipa
+cd ../../../../../
+mkdir build
+cp test/react-native/features/fixtures/$REACT_NATIVE_VERSION/output/output.ipa build/$REACT_NATIVE_VERSION.ipa
