@@ -14,7 +14,7 @@ cd ios
 xcrun xcodebuild \
   -scheme rn055 \
   -project rn055.xcodeproj \
-  -configuration Debug \
+  -configuration Release \
   -archivePath ../rn055.xcarchive \
   -allowProvisioningUpdates \
   -quiet \

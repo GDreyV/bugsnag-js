@@ -3,7 +3,7 @@ cd ios && pod install
 xcrun xcodebuild \
   -scheme reactnative \
   -workspace reactnative.xcworkspace \
-  -configuration Debug \
+  -configuration Release \
   -archivePath ../reactnative.xcarchive \
   -allowProvisioningUpdates \
   -quiet \

@@ -1,4 +1,10 @@
 #!
+
+if [ -z "$REACT_NATIVE_VERSION"]; then
+    echo "The environment variable 'REACT_NATIVE_VERSION' must be set"
+    exit 1
+fi
+
 cp -r test/react-native/features/fixtures/app test/react-native/features/fixtures/$REACT_NATIVE_VERSION/app
 cd test/react-native/features/fixtures/$REACT_NATIVE_VERSION
 source build.sh
