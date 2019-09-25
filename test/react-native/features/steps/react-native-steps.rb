@@ -6,7 +6,7 @@ When("I run {string}") do |event_type|
   }
 end
 
-When("I run {string} and relaunch the app") do
+When("I run {string} and relaunch the app") do |event_type|
   steps %Q{
     When I run "#{event_type}"
     And I clear any error dialogue
