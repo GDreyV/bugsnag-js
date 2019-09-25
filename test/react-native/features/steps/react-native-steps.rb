@@ -22,10 +22,11 @@ end
 When("I clear any error dialogue") do
   sleep(3)
   # Error dialogue is auto-cleared on IOS
-  return if $driver.device_type.start_with?("IOS")
-  $driver.click_element("android:id/button1") if $driver.wait_for_element("android:id/button1", 1)
-  $driver.click_element("android:id/aerr_close") if $driver.wait_for_element("android:id/aerr_close", 1)
-  $driver.click_element("android:id/aerr_restart") if $driver.wait_for_element("android:id/aerr_restart", 1)
+  unless $driver.device_type.start_with?("IOS")
+    $driver.click_element("android:id/button1") if $driver.wait_for_element("android:id/button1", 1)
+    $driver.click_element("android:id/aerr_close") if $driver.wait_for_element("android:id/aerr_close", 1)
+    $driver.click_element("android:id/aerr_restart") if $driver.wait_for_element("android:id/aerr_restart", 1)
+  end
 end
 
 When("I configure Bugsnag for {string}") do |event_type|
