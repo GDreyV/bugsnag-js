@@ -58,10 +58,11 @@ export default class App extends Component {
   prepareBugsnagConfig() {
     let config = new Configuration("ABCDEFGHIJKLMNOPQRSTUVWXYZ123456")
     let delivery = new StandardDelivery(
-      "http://bs-local:9339",
-      "http://bs-local:9339"
+      "http://bs-local.com:9339",
+      "http://bs-local.com:9339"
     )
     config.delivery = delivery
+    config.autoCaptureSessions = false
     return config
   }
 
