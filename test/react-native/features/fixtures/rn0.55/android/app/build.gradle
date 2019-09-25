@@ -124,7 +124,7 @@ android {
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
-            output.outputFile = new File(
+            output.outputFileName = new File(
                 output.outputFile.parent + '/release/',
                 output.outputFile.name.replace("-unsigned.apk", ".apk")
             )
