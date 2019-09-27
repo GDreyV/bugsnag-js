@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 
 #import <BugsnagReactNative/BugsnagReactNative.h>
+#import "BugsnagConfiguration.h"
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -20,7 +21,9 @@
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
-  [BugsnagReactNative start];
+  BugsnagConfiguration *config = [BugsnagConfiguration new];
+  config.reportOOMs = false;
+  [BugsnagReactNative startWithConfiguration:config];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"rn055"
