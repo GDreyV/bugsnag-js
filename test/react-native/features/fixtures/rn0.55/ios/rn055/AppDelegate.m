@@ -23,6 +23,9 @@
 
   BugsnagConfiguration *config = [BugsnagConfiguration new];
   config.reportOOMs = false;
+  [config setEndpointsForNotify:@"http://bs-local.com:9339",
+                    sessions:@"http://session.example.com" ];
+  config.shouldAutoCaptureSessions = NO;
   [BugsnagReactNative startWithConfiguration:config];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
