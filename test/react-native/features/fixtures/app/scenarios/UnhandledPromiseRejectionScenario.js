@@ -5,7 +5,7 @@ export default class UnhandledPromiseRejectionScenario extends Scenario {
         new Promise((resolve, reject) => {
             setTimeout(() => {
                 reject("UnhandledPromiseRejection")
-            })
+            }, 500)
         })
     }
 }
