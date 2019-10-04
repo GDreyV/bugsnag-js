@@ -17,7 +17,6 @@ xcrun xcodebuild \
   -configuration Release \
   -archivePath ../rn055.xcarchive \
   -allowProvisioningUpdates \
-  -signingStyle automatic \
   -quiet \
   archive
 

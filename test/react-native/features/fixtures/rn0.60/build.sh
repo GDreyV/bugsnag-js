@@ -6,7 +6,6 @@ xcrun xcodebuild \
   -configuration Release \
   -archivePath ../reactnative.xcarchive \
   -allowProvisioningUpdates \
-  -signingStyle automatic \
   -quiet \
   archive
 
