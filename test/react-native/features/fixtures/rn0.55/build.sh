@@ -24,6 +24,7 @@ cd ..
 
 xcrun xcodebuild -exportArchive \
   -archivePath rn055.xcarchive \
+  -signingStyle automatic \
   -exportPath output/ \
   -quiet \
   -exportOptionsPlist exportOptions.plist

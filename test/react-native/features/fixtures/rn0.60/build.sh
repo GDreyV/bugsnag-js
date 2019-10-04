@@ -14,6 +14,7 @@ cd ..
 xcrun xcodebuild -exportArchive \
   -archivePath reactnative.xcarchive \
   -exportPath output/ \
+  -signingStyle automatic \
   -quiet \
   -exportOptionsPlist exportOptions.plist
 
