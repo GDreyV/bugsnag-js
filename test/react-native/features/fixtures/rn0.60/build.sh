@@ -6,6 +6,7 @@ xcrun xcodebuild \
   -configuration Release \
   -archivePath ../reactnative.xcarchive \
   -allowProvisioningUpdates \
+  -signingStyle automatic \
   -quiet \
   archive
 
@@ -14,7 +15,6 @@ cd ..
 xcrun xcodebuild -exportArchive \
   -archivePath reactnative.xcarchive \
   -exportPath output/ \
-  -signingStyle automatic \
   -quiet \
   -exportOptionsPlist exportOptions.plist
 

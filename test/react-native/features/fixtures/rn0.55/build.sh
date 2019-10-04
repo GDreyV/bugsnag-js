@@ -17,6 +17,7 @@ xcrun xcodebuild \
   -configuration Release \
   -archivePath ../rn055.xcarchive \
   -allowProvisioningUpdates \
+  -signingStyle automatic \
   -quiet \
   archive
 
@@ -24,7 +25,6 @@ cd ..
 
 xcrun xcodebuild -exportArchive \
   -archivePath rn055.xcarchive \
-  -signingStyle automatic \
   -exportPath output/ \
   -quiet \
   -exportOptionsPlist exportOptions.plist
