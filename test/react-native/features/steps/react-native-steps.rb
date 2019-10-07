@@ -49,3 +49,9 @@ Then("the event {string} equals one of:") do |field_path, table|
   valid_values = table.raw
   assert_true(valid_values.include?(actual_value), "#{field_path} value: #{actual_value} did not match the given list")
 end
+
+Then("the payload field {string} equals one of:") do |field_path, table|
+  actual_value = read_key_path(Server.current_request[:body], "#{field_path}")
+  valid_values = table.raw
+  assert_true(valid_values.include?(actual_value), "#{field_path} value: #{actual_value} did not match the given list")
+end
